@@ -1,0 +1,83 @@
+# ======================
+# Qt C++ Project .gitignore
+# ======================
+
+# CMake build directories
+build/
+out/
+cmake-build-*/
+
+# Visual Studio build directories
+*.sln
+*.vcxproj*
+*.user
+*.db
+*.opendb
+
+# Qt Creator project files
+*.pro.user
+*.qbs.user
+*.qmlproject.user
+*.creator
+*.creator.user*
+*.autosave
+
+# Compiled object files
+*.o
+*.obj
+*.lo
+*.la
+*.lai
+
+# Compiled dynamic libraries
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Compiled static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Qt resource files (generated)
+qrc_*.cpp
+moc_*.cpp
+moc_*.h
+ui_*.h
+
+# Backup and temporary files
+*~
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Test/coverage outputs
+*.gcno
+*.gcda
+*.gcov
+
+# Packaging
+*.7z
+*.zip
+*.tar.gz
+*.tar.xz
+
+# IDE specific
+.vscode/
+.idea/
+
+.vs
+.code

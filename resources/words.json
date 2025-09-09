@@ -1,0 +1,50 @@
+[
+  {
+    "word": "apple",
+    "definition": "a round fruit with red, green, or yellow skin",
+    "example": "She ate an apple for breakfast.",
+    "category": "fruit"
+  },
+  {
+    "word": "banana",
+    "definition": "a long curved fruit with a yellow skin",
+    "example": "Monkeys like eating bananas.",
+    "category": "fruit"
+  },
+  {
+    "word": "computer",
+    "definition": "an electronic machine that can store and process data",
+    "example": "He bought a new computer yesterday.",
+    "category": "technology"
+  },
+  {
+    "word": "mountain",
+    "definition": "a very high hill, often with snow on top",
+    "example": "We climbed a tall mountain last summer.",
+    "category": "nature"
+  },
+  {
+    "word": "river",
+    "definition": "a large, natural stream of water flowing into the sea",
+    "example": "The river flows through the valley.",
+    "category": "nature"
+  },
+  {
+    "word": "happy",
+    "definition": "feeling or showing pleasure or contentment",
+    "example": "She felt happy after hearing the good news.",
+    "category": "emotion"
+  },
+  {
+    "word": "book",
+    "definition": "a set of written or printed pages bound together",
+    "example": "He is reading a science fiction book.",
+    "category": "object"
+  },
+  {
+    "word": "school",
+    "definition": "a place where children are educated",
+    "example": "The children walked to school together.",
+    "category": "education"
+  }
+]

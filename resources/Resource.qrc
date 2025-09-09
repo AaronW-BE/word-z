@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>words.json</file>
+        <file>icons/app.png</file>
+    </qresource>
+</RCC>
