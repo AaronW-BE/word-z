@@ -130,6 +130,12 @@ bool WordZ::nativeEvent(const QByteArray& eventType, void* message, qintptr* res
             HWND hwnd = (HWND)winId();
             LONG exStyle = GetWindowLong(hwnd, GWL_EXSTYLE);
             if (m_dragEnabled) {
+                // 激活窗口
+                if (GetForegroundWindow() != hwnd) {
+                    ShowWindow(hwnd, SW_RESTORE);
+                    SetForegroundWindow(hwnd);
+                }
+
                 // 关闭穿透，允许交互
                 SetWindowLong(hwnd, GWL_EXSTYLE, (exStyle & ~WS_EX_TRANSPARENT) | WS_EX_LAYERED); // 保留 WS_EX_LAYERED
                 setAttribute(Qt::WA_NoSystemBackground, false);
@@ -157,6 +163,25 @@ bool WordZ::nativeEvent(const QByteArray& eventType, void* message, qintptr* res
         }
         *result = 0;
         return true;
+    }
+    else if (msg->message == WM_ACTIVATE) {
+        if (LOWORD(msg->wParam) == WA_INACTIVE) {
+            qDebug() << "Window deactived";
+
+            m_dragEnabled = !m_dragEnabled;
+            HWND hwnd = (HWND)winId();
+            LONG exStyle = GetWindowLong(hwnd, GWL_EXSTYLE);
+
+            // 开启穿透，不能交互
+            SetWindowLong(hwnd, GWL_EXSTYLE, exStyle | WS_EX_TRANSPARENT | WS_EX_LAYERED);
+            setAttribute(Qt::WA_TranslucentBackground);
+
+            settings().setValue("window/pos", this->pos());
+            setPalette(QPalette());
+            setCursor(Qt::ArrowCursor);
+            qDebug() << "Disable move window";
+            update();
+        }
     }
 #endif
     return QWidget::nativeEvent(eventType, message, result);
