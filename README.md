@@ -3,6 +3,10 @@ WordZ
 This is a free software for learning new words and improving vocabulary.
 Thanks for freedictionary project (https://freedict.org/) for the word database.
 
+![Screen](./doc/images/screenshoot.png)
+
+![Screen Moveable](./doc/images/moveable.png)
+
 ## Shortcuts
 
 * CTRL + ALT + M : Move the window
